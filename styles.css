@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.border-box {
+  width: 600px;
+  height: 600px;
+  background: blue;
+  position: relative;
+  overflow: hidden;
+}
+
+.sun {
+  background: yellow;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+}
+
+.mountains {
+  height: 200px;
+  width: 600px;
+  position: absolute;
+  bottom: 0;
+  /* background: green; */
+}
+
+.mountain {
+  position: absolute;
+  width: 220px;
+  height: 350px;
+  background-color: green;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+.mountain:nth-child(1) {
+  top: -30px;
+  left: 10px;
+}
+
+.mountain:nth-child(2) {
+  top: -50px;
+  left: 120px;
+  width: 240px;
+  height: 360px;
+}
+
+.mountain:nth-child(3) {
+  top: -20px;
+  left: 180px;
+  width: 240px;
+  height: 240px;
+}
+
+.mountains:nth-of-type(2) {
+  left: 220px;
+  bottom: -40px;
+  transform: rotate(25deg);
+}
