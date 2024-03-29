@@ -1,13 +1,17 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background: #111111;
+}
 
-.border-box {
+.sky {
   width: 600px;
   height: 600px;
   background: blue;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .sun {
@@ -16,9 +20,9 @@
   width: 200px;
   border-radius: 50%;
   position: absolute;
-  bottom: 0;
-  z-index: 3;
-  display: none;
+  z-index: 2;
+  bottom: -100px;
+  left: -150px;
 }
 
 .mountains {
@@ -26,7 +30,7 @@
   width: 600px;
   position: absolute;
   bottom: 0;
-  /* background: green; */
+  z-index: 3;
 }
 
 .mountain {
@@ -61,4 +65,77 @@
   left: 220px;
   bottom: -40px;
   transform: rotate(25deg);
+}
+
+@keyframes sunmotion {
+  0% {
+    bottom: -100px;
+    left: 500px;
+    background: white;
+  }
+  16% {
+    bottom: -100px;
+    left: -150px;
+    background: yellow;
+    box-shadow: none;
+  }
+  33% {
+    bottom: 350px;
+    left: 200px;
+    box-shadow: 1px 1px 120px 50px yellow;
+  }
+  49% {
+    bottom: -100px;
+    left: 500px;
+    background: yellow;
+    box-shadow: none;
+  }
+  66% {
+    bottom: -100px;
+    left: -150px;
+    background: white;
+    box-shadow: none;
+  }
+  83% {
+    bottom: 350px;
+    left: 200px;
+    box-shadow: 1px 1px 100px #fff;
+  }
+  100% {
+    bottom: -100px;
+    left: 500px;
+    background: white;
+  }
+}
+
+.sun {
+  animation: 14s sunmotion ease-in-out infinite;
+}
+
+@keyframes skyColor {
+  0% {
+    background: black;
+  }
+  16% {
+    background: pink;
+  }
+  32% {
+    background: blue;
+  }
+  49% {
+    background: purple;
+  }
+  66% {
+    background: black;
+  }
+  83% {
+    background: #333333;
+  }
+  100% {
+    background: black;
+  }
+}
+
+.sky {
+  animation: 14s skyColor ease-in-out backwards infinite;
 }
