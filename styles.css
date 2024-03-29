@@ -12,6 +12,7 @@ body {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  animation: 16s skyColor ease-in-out infinite;
 }
 
 .sun {
@@ -23,6 +24,7 @@ body {
   z-index: 2;
   bottom: -100px;
   left: -150px;
+  animation: 16s sunMotion ease-in-out infinite;
 }
 
 .mountains {
@@ -67,49 +69,39 @@ body {
   transform: rotate(25deg);
 }
 
-@keyframes sunmotion {
+@keyframes sunMotion {
   0% {
-    bottom: -100px;
-    left: 500px;
     background: white;
+    transform: translate(0px, 0px);
   }
   16% {
-    bottom: -100px;
-    left: -150px;
-    background: yellow;
+    background: orange;
     box-shadow: none;
+    transform: translate(0px, 0px);
   }
   33% {
-    bottom: 350px;
-    left: 200px;
+    background: yellow;
     box-shadow: 1px 1px 120px 50px yellow;
+    transform: translate(350px, -450px);
   }
   49% {
-    bottom: -100px;
-    left: 500px;
-    background: yellow;
+    background: tomato;
     box-shadow: none;
+    transform: translate(750px, 0px);
   }
   66% {
-    bottom: -100px;
-    left: -150px;
     background: white;
     box-shadow: none;
+    transform: translate(0px, 0px);
   }
   83% {
-    bottom: 350px;
-    left: 200px;
     box-shadow: 1px 1px 100px #fff;
+    transform: translate(350px, -450px);
   }
   100% {
-    bottom: -100px;
-    left: 500px;
     background: white;
+    transform: translate(750px, 0px);
   }
-}
-
-.sun {
-  animation: 14s sunmotion ease-in-out infinite;
 }
 
 @keyframes skyColor {
@@ -134,8 +126,4 @@ body {
   100% {
     background: black;
   }
-}
-
-.sky {
-  animation: 14s skyColor ease-in-out backwards infinite;
 }
