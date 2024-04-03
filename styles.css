@@ -81,7 +81,7 @@ body {
   }
   33% {
     background: yellow;
-    box-shadow: 1px 1px 120px 50px yellow;
+    box-shadow: 1px 1px 100px yellow;
     transform: translate(350px, -450px);
   }
   49% {
@@ -111,7 +111,7 @@ body {
   16% {
     background: pink;
   }
-  32% {
+  33% {
     background: blue;
   }
   49% {
