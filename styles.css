@@ -3,6 +3,11 @@
 }
 body {
   background: #111111;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .sky {
@@ -125,5 +130,37 @@ body {
   }
   100% {
     background: black;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+footer p, footer small {
+  text-align: center;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .fa-terminal{
+  animation: terminal-animate 1.5s infinite;
+}
+
+@keyframes terminal-animate {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
